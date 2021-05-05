@@ -4,14 +4,9 @@ use IEEE.STD_LOGIC_1164.all;
 entity traditionalSystem_RNStoBin is
 	generic (n : natural := 4);
 	port(
-	CLOCK_50: in STD_LOGIC;
-	CLK_500Hz: in STD_LOGIC;
-	RKEY: in STD_LOGIC_VECTOR(3 downto 0);
-	KEY: in STD_LOGIC_VECTOR(3 downto 0);
-	RSW: in STD_LOGIC_VECTOR(17 downto 0);
-			SW    : in STD_LOGIC_VECTOR(17 downto 0);
-		  LEDR : out STD_LOGIC_VECTOR(17 downto 0);
-        HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7: out std_logic_vector(6 downto 0));
+		SW    : in STD_LOGIC_VECTOR(17 downto 0);
+		LEDR : out STD_LOGIC_VECTOR(17 downto 0)
+	);
 end traditionalSystem_RNStoBin;
 
 architecture Structural of traditionalSystem_RNStoBin is
@@ -37,7 +32,6 @@ signal A, B, C, D: std_logic_vector(2*n-1 downto 0);
 signal sum0_2n_m1 , carry0_2n_m1 : std_logic_vector(2*n-1 downto 0);
 signal sum1_2n_m1 , carry1_2n_m1 : std_logic_vector(2*n-1 downto 0);
 signal ones : std_logic_vector(2 downto 0);
---signal fout : std_logic_vector(2*n-1 downto 0); -- apagar se nao der certo
 
 begin
 
