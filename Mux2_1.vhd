@@ -2,7 +2,7 @@
  use IEEE.STD_LOGIC_1164.all;
 
  entity Mux2_1 is
-    generic(n :positive:=4);
+    generic(n : natural);
     port ( A : in STD_LOGIC_VECTOR (n-1 downto 0);
            B : in STD_LOGIC_VECTOR (n-1 downto 0);
            Sel : in STD_LOGIC;

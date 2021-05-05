@@ -1,0 +1,73 @@
+C:/VHDL/EEL7123-LAB-3/CPA_mod15.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/CPA_mod15.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPA_mod15
+-- Compiling architecture structural of CPA_mod15
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/traditionalSystem_BinToRNS.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/traditionalSystem_BinToRNS.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity traditionalSystem_BinToRNS
+-- Compiling architecture Structural of traditionalSystem_BinToRNS
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/traditionalSystem_RNStoBin.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/traditionalSystem_RNStoBin.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity traditionalSystem_RNStoBin
+-- Compiling architecture Structural of traditionalSystem_RNStoBin
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/fulladder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/fulladder.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder
+-- Compiling architecture structural of fulladder
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/CSA_EAC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/CSA_EAC.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CSA_EAC
+-- Compiling architecture Structural of CSA_EAC
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/CPA_mod255.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/CPA_mod255.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPA_mod255
+-- Compiling architecture structural of CPA_mod255
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/CPA_mod17.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/CPA_mod17.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPA_mod17
+-- Compiling architecture structural of CPA_mod17
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/CSA_IEAC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/CSA_IEAC.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CSA_IEAC
+-- Compiling architecture Structural of CSA_IEAC
+
+} {} {}} C:/VHDL/EEL7123-LAB-3/Mux2_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/VHDL/EEL7123-LAB-3/Mux2_1.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux2_1
+-- Compiling architecture Mux of Mux2_1
+
+} {} {}}

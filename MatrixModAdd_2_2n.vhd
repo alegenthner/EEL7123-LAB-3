@@ -6,14 +6,14 @@ entity MatrixModAdd_2_2n is
   port(
     moduli_m1_A : in std_logic_vector(n-1 downto 0); -- first entry with n bits
     moduli_m1_B : in std_logic_vector(n-1 downto 0); -- second entry with n bits
-    moduli_m1_Out : out std_logic_vector(2*n-1 downto 0) -- output exppected to have two times the number of bits
+    moduli_m1_Out : out std_logic_vector(n-1 downto 0) -- output exppected to have two times the number of bits
   );
 end MatrixModAdd_2_2n;
 
 architecture behavior of MatrixModAdd_2_2n is
 
   component CSA_EAC is
-    generic (n : natural);
+    generic (n : natural := 8);
     port(		I0 : in STD_LOGIC_VECTOR((n-1) downto 0);
             I1 : in STD_LOGIC_VECTOR((n-1) downto 0);
             I2 : in STD_LOGIC_VECTOR((n-1) downto 0);
@@ -23,7 +23,7 @@ architecture behavior of MatrixModAdd_2_2n is
   end component;
 
   component CPA_mod255 is
-    generic(n : natural);
+    generic(n : natural := 8);
     port( s1 : in STD_LOGIC_VECTOR (n-1 downto 0);
           c1 : in STD_LOGIC_VECTOR (n-1 downto 0);
           f : out STD_LOGIC_VECTOR(n-1 downto 0)
@@ -31,11 +31,11 @@ architecture behavior of MatrixModAdd_2_2n is
   end component;
 
   component Mux2_1 is
-    generic(n : natural); -- quando for declarar o componente, generic map
+    generic(n : natural := 8); -- quando for declarar o componente, generic map
     port(   A : in STD_LOGIC_VECTOR (n-1 downto 0);
             B : in STD_LOGIC_VECTOR (n-1 downto 0);
             Sel : in STD_LOGIC;
-            S : out STD_LOGIC_VECTOR (n-1 downto 0));
+            S : out STD_LOGIC_VECTOR (n-1 downto 0)
     );
   end component;
 
@@ -63,48 +63,48 @@ architecture behavior of MatrixModAdd_2_2n is
     auxG <= moduli_m1_A(n-7 downto 0) & "000000";
     auxH <= moduli_m1_A(0) & "0000000";
 
-  U0: Mux2_1  generic map(n <= n)
+  U0: Mux2_1  generic map(n => n)
               port map( "00000000", moduli_m1_A, moduli_m1_B(0), A);
-  U1: Mux2_1  generic map( n <= n)
+  U1: Mux2_1  generic map(n => n)
               port map( "00000000", auxB, moduli_m1_B(1), B );
-  U2: Mux2_1  generic map( n <= n)
+  U2: Mux2_1  generic map(n => n)
               port map( "00000000", auxC, moduli_m1_B(2), C );
-  U3: Mux2_1  generic map( n <= n)
+  U3: Mux2_1  generic map(n => n)
               port map( "00000000", auxD, moduli_m1_B(3), D );
-  U4: Mux2_1  generic map( n <= n)
+  U4: Mux2_1  generic map(n => n)
               port map( "00000000", auxE, moduli_m1_B(4), E );
-  U5: Mux2_1  generic map( n <= n)
+  U5: Mux2_1  generic map(n => n)
               port map( "00000000", auxF, moduli_m1_B(5), F );
-  U6: Mux2_1  generic map( n <= n)
+  U6: Mux2_1  generic map(n => n)
               port map( "00000000", auxG, moduli_m1_B(6), G );
-  U7: Mux2_1  generic map( n <= n)
+  U7: Mux2_1  generic map(n => n)
               port map( "00000000", auxH, moduli_m1_B(7), H );
   -- begin of CSA tree
-  U8: CSA_EAC generic map(n <= n)
+  U8: CSA_EAC generic map(n => n)
               port map(
                 A, B, C, sum0, carry0
               );
-  U9: CSA_EAC generic map(n <= n)
+  U9: CSA_EAC generic map(n => n)
               port map(
                 sum0, carry0, D, sum1, carry1
               );
-  U10: CSA_EAC generic map(n <= n)
+  U10: CSA_EAC generic map(n => n)
               port map(
                 sum1, carry1, E, sum2, carry2
               );
-  U11: CSA_EAC generic map(n <= n)
+  U11: CSA_EAC generic map(n => n)
               port map(
                 sum2, carry2, F, sum3, carry3
               );
-  U12: CSA_EAC generic map(n <= n)
+  U12: CSA_EAC generic map(n => n)
               port map(
                 sum3, carry3, G, sum4, carry4
               );
-  U13: CSA_EAC generic map(n <= n)
+  U13: CSA_EAC generic map(n => n)
               port map(
                 sum4, carry4, H, sum5, carry5
               );
-  U14: CPA_mod255 generic map(n <= n)
+  U14: CPA_mod255 generic map(n => n)
                   port map(
                     sum5, carry5, moduli_m1_Out
                   );
